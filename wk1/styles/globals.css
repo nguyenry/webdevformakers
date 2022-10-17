@@ -1,0 +1,102 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+#container {
+    max-width: 700px;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+#prof-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+#top-section {
+    text-align: center;
+    margin: 64px 0;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+}
+
+@media (min-width: 600px) {
+    h1 {
+        font-size: 56px;
+        line-height: 72px;
+    }
+}
+
+p {
+    font-size: 24px;
+    line-height: 40px;
+}
+
+p a {
+    color: blue;
+    text-decoration: none;
+}
+
+hr {
+    margin: 56px 0;
+}
+
+.project-box {
+    border: 1px solid #bbb;
+    padding: 48px;
+    border-radius: 16px;
+    margin-bottom: 32px;
+    position: relative;
+}
+
+.project-box img {
+    width: 100%;
+}
+
+.project-box h2 {
+    font-size: 32px;
+    margin-top: 32px;
+    margin-bottom: 12px;
+}
+
+.project-box p {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 0;
+    margin-top: 12px;
+}
+
+.project-wrapper {
+    color: unset;
+    text-decoration: none;
+}
+
+#navbar {
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 10px;
+    background-color: #222;
+    color: white;
+    position: absolute;
+    top: 24px;
+    left: 24px
+}
