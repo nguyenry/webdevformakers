@@ -10,6 +10,10 @@ body {
     margin: 0 auto;
 }
 
+.container img {
+    width: 100%;
+}
+
 #prof-pic {
     width: 200px;
     height: 200px;
@@ -76,6 +80,17 @@ hr {
 .project-wrapper {
     color: unset;
     text-decoration: none;
+}
+
+#project-page-top {
+    max-width: 1000px;
+    text-align: center;
+    border-radius: 100px;
+    margin-top: 28px;
+}
+
+#proj-pic{
+    width: 100%
 }
 
 #navbar {

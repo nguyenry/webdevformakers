@@ -1,4 +1,8 @@
 import Head from "next/head";
+import Project from "../components/Project";
+import projects from "../data/projects";
+import React from "react";
+import ReactTypingEffect from "react-typing-effect";
 
 export default function Index() {
     return (
@@ -13,7 +17,7 @@ export default function Index() {
             <div id="container">
                 <div id ="top-section">
                     <img src="/stem-fair.png" alt="" id="prof-pic"/>
-                    <h1>Xin chào!<br/>Tên tôi là Ryan.</h1>
+                    <h1>Xin chào!<br/>Tên tôi là <ReactTypingEffect text={["Ryan"]}/>.</h1>
                 </div>
                 <p>
                     I'm a <b>Computer Science</b> major at Harvey Mudd College as well as an <b>Art</b> major at Scripps College.
@@ -25,25 +29,16 @@ export default function Index() {
                     Outside of CS, I enjoy <b>drawing and animating!</b> I've worked on a few short films/animations in high school, but those are now <b>locked away</b> in the deep, deep confines of my Google Drive. However, here are some of the <b>artworks</b> I've completed during my time in college!
                 </p>
                 <hr/>
-                <a href="https://en.wikipedia.org/wiki/Still_life" className="project-wrapper">
-                    <div className="project-box">
-                        <img src="still-life.jpg" alt="Still Life with Glazing"></img>
-                        <h2>Still Life with Glazing</h2>
-                        <p>
-                            <i>Acrylic and oil on canvas</i><br/><br/>This was my first project for Intro to Painting and was also my first time ever painting! I honestly really struggled with this piece technically, but it's not too shabby should I say so myself.
-                        </p>
-                        <div className="badge"><span>Artwork</span></div>
-                    </div>
-                </a>
-                <a href="https://en.wikipedia.org/wiki/Abstract_art" className="project-wrapper">
-                    <div className="project-box">
-                        <img src="abstract-triptych.jpg" alt="Abstract Triptych"></img>
-                        <h2>Abstract Triptych</h2>
-                        <p>
-                            <i>Acrylic and oil on canvas</i><br/><br/>Another piece from Intro to Painting, I am a little more satisfied with how this turned out, but there's always room to improve.
-                        </p>
-                    </div>
-                </a>
+                {projects.map(d => (
+                    <Project
+                        title={d.title}
+                        description={d.description}
+                        medium={d.medium}
+                        link={d.link}
+                        image={d.image}
+                        alt={d.alt}
+                    />
+                ))}
             </div>
         </>
     );
